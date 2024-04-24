@@ -13,7 +13,8 @@ class AFN:
         self.trancisiones = {                                               #estados y transiciones del AFN.
             "q0": {"char": ["q1"]},                                         #Estado inicial q0 a q1, donde se identificara con un caracter.
             "q1": {"char": ["q1"], "@": ["q2"]},                            #Estado q1 a q2, donde se identificará el limite con un @.
-            "q2": {"char": ["q2"], ".": ["q3"]}                             #Estado q2 a q3, donde se identificará el limite con un punto.
+            "q2": {"char": ["q2"], ".": ["q3"]},                             #Estado q2 a q3, donde se identificará el limite con un punto.
+            "q3": {"char": ["q3"]}                                          #Estado q3 a q3, donde se identificará el limite con un caracter.
         }
         self.estado_aceptado="q3"                                           #Estado de aceptación del AFN.
 
