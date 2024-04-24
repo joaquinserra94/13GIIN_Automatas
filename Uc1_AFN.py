@@ -39,7 +39,15 @@ strings_aceptados = ["usuario@ejemplo.com", "nombre.apellido@ejemplo.es"]   #Rea
 for strings in strings_aceptados:
     if afn.proceso_input(strings):                                          #Si el string es aceptado, se notifica al usuario con un mensaje.
         print(f"'{strings}' es una direccion de correo válida!!")
-    else:                                                                  #Si el string no es aceptado, se notifica al usuario con un mensaje.
+    else:                                                                   #Si el string no es aceptado, se notifica al usuario con un mensaje.
         print(f"'{strings}' no es una direccion de correo válida!!")
         print("Por favor, intenta ingresar un correo válido.")
         
+strings_no_aceptados = ["usuario@ejemplo", "nombre.apellido@ejemplo", 
+                        "@ejemplo.com", "usuario@"]                         #Realizamos una lista de strings que no deberian ser aceptados.
+for strings in strings_no_aceptados:
+    if afn.proceso_input(strings):                                          
+        print(f"'{strings}' es una direccion de correo válida!!")
+    else:                                                                   
+        print(f"'{strings}' no es una direccion de correo válida!!")
+        print("Por favor, intenta ingresar un correo válido.")
