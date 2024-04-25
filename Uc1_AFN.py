@@ -36,25 +36,6 @@ class AFN:
                 return False                                                #Retorna False si no se alcanza un estado.
         return estado_actual == self.estado_aceptado                        #Retorna el estado actual si es el estado aceptado.
     
-'''afn = AFN()                                                              #Instancia de la clase AFN.
-
-strings_aceptados = ["usuario@ejemplo.com", "nombre.apellido@ejemplo.es"]   #Realizamos una lista de strings que deberian ser aceptados.
-for strings in strings_aceptados:
-    if afn.proceso_input(strings):                                          #Si el string es aceptado, se notifica al usuario con un mensaje.
-        print(f"'{strings}' es una direccion de correo válida!!")
-    else:                                                                   #Si el string no es aceptado, se notifica al usuario con un mensaje.
-        print(f"'{strings}' no es una direccion de correo válida!!")
-        print("Por favor, intenta ingresar un correo válido.")
-        
-strings_no_aceptados = ["usuario@ejemplo", "nombre.apellido@ejemplo", 
-                        "@ejemplo.com", "usuario@"]                         #Realizamos una lista de strings que no deberian ser aceptados.
-for strings in strings_no_aceptados:
-    if afn.proceso_input(strings):                                          
-        print(f"'{strings}' es una direccion de correo válida!!")
-    else:                                                                   
-        print(f"'{strings}' no es una direccion de correo válida!!")
-        print("Por favor, intenta ingresar un correo válido.")'''
-
 def inicio():
     print("Bienvenido al validador de direcciones de correo electrónico de la actividad nº1 de Teoría de Autómatas y Lenguajes Formales.")
     print("Por favor, introduce una dirección de correo electrónico asi puedo verificar si es valida o no.")
@@ -71,15 +52,15 @@ def inicio():
         
 inicio()  
 
-afn = AFN()                                                              #Instancia de la clase AFN.
-
+'''afn = AFN()                                                              #Instancia de la clase AFN.
+'''
 strings_aceptados = ["usuario@ejemplo.com", "nombre.apellido@ejemplo.es"]   #Realizamos una lista de strings que deberian ser aceptados.
 for strings in strings_aceptados:
     if afn.proceso_input(strings):                                          #Si el string es aceptado, se notifica al usuario con un mensaje.
         print(f"'{strings}' es una direccion de correo válida!!")
     else:                                                                   #Si el string no es aceptado, se notifica al usuario con un mensaje.
         print(f"'{strings}' no es una direccion de correo válida!!")
-        print("Por favor, intenta ingresar un correo válido.")
+        
         
 strings_no_aceptados = ["usuario@ejemplo", "nombre.apellido@ejemplo", 
                         "@ejemplo.com", "usuario@"]                         #Realizamos una lista de strings que no deberian ser aceptados.
@@ -88,4 +69,4 @@ for strings in strings_no_aceptados:
         print(f"'{strings}' es una direccion de correo válida!!")
     else:                                                                   
         print(f"'{strings}' no es una direccion de correo válida!!")
-        print("Por favor, intenta ingresar un correo válido.")
+        
